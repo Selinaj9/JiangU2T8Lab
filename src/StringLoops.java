@@ -158,4 +158,26 @@ public class StringLoops {
         /* to be implemented */
         return origString.replace(searchString,"");
     }
+
+    /* Prints all integers from fromNum through toNum, separated by
+     a commas and a space, on a single line;
+     there should NOT be a comma after the final number.
+     If fromNum == toNum, print just the number and no comma.
+     If fromNum > toNum, the numbers should be printed in descending order.
+     After all numbers are printed, move the cursor to the next line.
+
+     Examples:
+     - if fromNum = 0 and toNum = 5, this method should print: 0, 1, 2, 3, 4, 5
+     - if fromNum = -3 and toNum = 2, this method should print: -3, -2, -1, 0, 2
+     - if fromNum = 8 and toNum = 1, this method should print: 8, 7, 6, 5, 4, 3, 2, 1
+     - if fromNum = 4 and toNum = 4, this method should print: 4
+     - if fromNum = 0 and toNum = 0, this method should print: 0
+    */
+    public void commaSeparated(int fromNum, int toNum) {
+        /* to be implemented */
+        for (int i = fromNum; i < toNum; i++) {
+            System.out.print(i + ", ");
+        }
+        System.out.println(toNum);
+    }
 }
