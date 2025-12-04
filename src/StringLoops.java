@@ -94,4 +94,37 @@ public class StringLoops {
         }
         return ans;
     }
+
+    /* Returns the number of times "searchString" appears in "origString";
+     matches should be case sensitive (i.e. no need to worry about lower vs. uppercase)
+
+     Examples:
+     - if searchString = "an" and origString = "canned beans and bananas",
+       this method returns 5: canned beans and bananas
+     - if searchString = "tat" and origString = "Ratatattat",
+       this method returns 3: Ratatattat (note the overlap!)
+     - if searchString = "lower" and origString = "sunflower",
+       this method returns 1: sunflower
+     - if searchString = "haha" and origString = "Hahahahaha",
+       this method returns 3: Hahahahaha (note the overlap!)
+     - if searchString = "rain" and origString = "rain drain pain train",
+       this method returns 3: rain drain pain train
+     - if searchString = "was" and origString = "I was about to call you",
+       this method returns 1: I was about to call you
+     - if searchString = "but" and origString = "I was about to call you",
+       this method returns 0: I was about to call you
+     - searchString = "i", origString = "iiiit's supercalifragilisticexpialidociousi",
+       this method returns 12: iiiit's supercalifragilisticexpialidociousi
+    */
+    public int countString(String searchString, String origString) {
+        /* to be implemented */
+        int ans = 0;
+        int idx = origString.indexOf(searchString);
+        while (idx != -1) {
+            origString = origString.substring(idx + 1);
+            idx = origString.indexOf(searchString);
+            ans ++;
+        }
+        return ans;
+    }
 }
