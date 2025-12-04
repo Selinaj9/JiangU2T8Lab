@@ -79,4 +79,19 @@ public class StringLoops {
         return ans;
     }
 
+    /* DOES THE EXACT SAME THING AS replaceCharacterV1, except using a while loop
+
+      PRECONDITION: searchChar and replaceChar are single characters and are not equal
+    */
+    public String replaceCharacterV2(String searchChar, String origStr, String replaceChar){
+        /* to be implemented */
+        /* USE A WHILE LOOP and implement it similarly to this removeA example */
+        String ans = origStr;
+        int idx = ans.indexOf(searchChar);
+        while (idx != -1) {
+            ans = ans.substring(0,idx) + replaceChar + ans.substring(idx + 1);
+            idx = ans.indexOf(searchChar);
+        }
+        return ans;
+    }
 }
