@@ -1,12 +1,13 @@
 public class Main {
     public static void main(String[] args) {
-        CoinFlip coin = new CoinFlip();
-        for (int i = 1; i <= 50; i++) {
-            System.out.println("flip " + i + ": " + coin.flip());
-        }
-
-        for (int i = 100; i <= 1000; i += 100) {
-            System.out.println("simulation with " + i + " coin flips: percent heads = " + coin.simulate(i));
-        }
+        StringLoops loops = new StringLoops();
+        System.out.println(loops.replaceCharacterV1("a", "canned beans and bananas", "*"));
+        System.out.println(loops.replaceCharacterV1(" ", "canned beans and bananas", ""));
+        System.out.println(loops.replaceCharacterV1("t", "Ratatattat", "p"));
+        System.out.println(loops.replaceCharacterV1("!", "Nice! Day today!", "?"));
+        System.out.println(loops.replaceCharacterV1("i", "it’s the brain drain pain train", "I"));
+        System.out.println(loops.replaceCharacterV1("i", "it’s the brain drain pain train", " "));
+        System.out.println(loops.replaceCharacterV1("A", "ABABABABABC", "D"));
+        System.out.println(loops.replaceCharacterV1("a", "ABABABABABC", "D"));
     }
 }
