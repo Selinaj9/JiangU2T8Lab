@@ -187,4 +187,55 @@ public class StringLoops {
             System.out.println(toNum);
         }
     }
+
+    /* Returns true if myString is a palindrome, i.e. the characters read the same
+    forwards and backwards, and false otherwise. Don't worry about case.
+    NOTE!  Spaces should be disregarded when determining if it's a palindrome.
+    "no lemon no melon" is a palindrome!
+
+     Examples:
+     - myString = "A", return true
+     - myString = "mom", return true
+     - myString = "dad", return true
+     - myString = "bob", return true
+     - myString = "noon", return true
+     - myString = "deed", return true
+     - myString = "12321", return true
+     - myString = "aaaaaaa", return true
+     - myString = "baaabaaab", return true
+     - myString = "civic", return true
+     - myString = "kayak", return true
+     - myString = "racecar", return true
+     - myString = "my gym", return true
+     - myString = "step on no pets", return true
+     - myString = "45TTGTT54", return true
+     - myString = "no lemon no melon", return true
+     - myString = "a nut for a jar of tuna", return true
+     - myString = "! 1 2 3 4 M 6M4321!", return true
+     - myString = "was it a car or a cat i saw", return true
+     - myString = "a man a plan a canal panama", return true
+     - myString = "mod", return false
+     - myString = "dang", return false
+     - myString = "boo", return false
+     - myString = "noonish", return false
+     - myString = "indeed", return false
+     - myString = "1234432", return false
+     - myString = "civics", return false
+     - myString = "kayaks", return false
+     - myString = "racing car", return false
+     - myString = "my gyms", return false
+     - myString = "step on pets", return false
+     - myString = "1 3 2 4 3 2 1", return false
+     - myString = "AAADAA", return false
+     - myString = "BaaBaaaB", return false
+    */
+    public boolean isPalindrome(String myString) {
+        /* to be implemented */
+        myString = replaceCharacterV1(" ", myString,"");
+        String myString2 = reverseString(myString);
+        if (myString.equals(myString2)) {
+            return true;
+        }
+        return false;
+    }
 }
