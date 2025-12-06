@@ -175,9 +175,16 @@ public class StringLoops {
     */
     public void commaSeparated(int fromNum, int toNum) {
         /* to be implemented */
-        for (int i = fromNum; i < toNum; i++) {
-            System.out.print(i + ", ");
+        if (fromNum < toNum) {
+            for (int i = fromNum; i < toNum; i++) {
+                System.out.print(i + ", ");
+            }
+            System.out.println(toNum);
+        } else {
+            for (int i = fromNum; i > toNum; i--) {
+                System.out.print(i + ", ");
+            }
+            System.out.println(toNum);
         }
-        System.out.println(toNum);
     }
 }
